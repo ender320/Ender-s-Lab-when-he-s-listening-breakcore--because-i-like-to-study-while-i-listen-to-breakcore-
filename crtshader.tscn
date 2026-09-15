@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cwu7u5bj8lh2q"]
+
+[ext_resource type="Shader" uid="uid://ducm6xpheca5k" path="res://crtshader.gdshader" id="1_4hgk2"]
+[ext_resource type="Script" uid="uid://46yireiwl7he" path="res://color_rect.gd" id="2_kvhd2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
+shader = ExtResource("1_4hgk2")
+shader_parameter/mask_type = 1
+shader_parameter/curve = 0.0
+shader_parameter/sharpness = 0.6666667
+shader_parameter/color_offset = 0.0
+shader_parameter/mask_brightness = 1.0
+shader_parameter/scanline_brightness = 1.0
+shader_parameter/min_scanline_thickness = 0.5
+shader_parameter/aspect = 0.75
+shader_parameter/wobble_strength = 0.0
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=338251232]
+follow_viewport_enabled = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=663518090]
+material = SubResource("ShaderMaterial_g4v7s")
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_kvhd2")

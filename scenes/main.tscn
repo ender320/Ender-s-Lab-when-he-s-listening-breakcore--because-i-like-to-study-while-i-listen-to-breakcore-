@@ -15,6 +15,9 @@ size = Vector2(20, 657)
 [node name="Sprite2D" parent="." unique_id=747391524 instance=ExtResource("1_sugp2")]
 position = Vector2(0, 320.5)
 
+[node name="Sprite2D3" parent="." unique_id=929945600 instance=ExtResource("1_sugp2")]
+position = Vector2(1157, 322)
+
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2071582433]
 position = Vector2(570.5, 635.5)
 scale = Vector2(9.1328125, 0.22656249)
@@ -33,5 +36,12 @@ shape = SubResource("RectangleShape2D_yf5fn")
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=332856126]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=869492194]
+position = Vector2(0, 318.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1190066945]
+position = Vector2(1155, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=34690254]
 position = Vector2(0, 318.5)
 shape = SubResource("RectangleShape2D_g4v7s")

@@ -276,6 +276,10 @@ autoplay = "idle"
 position = Vector2(0.5, 3)
 shape = SubResource("RectangleShape2D_g4v7s")
 
-[node name="RayCast2D" type="RayCast2D" parent="." unique_id=310784501]
+[node name="Left_Grab" type="RayCast2D" parent="." unique_id=310784501]
 position = Vector2(0, 3)
 target_position = Vector2(-13, 0)
+
+[node name="Right_Grab" type="RayCast2D" parent="." unique_id=558945183]
+position = Vector2(1, 3)
+target_position = Vector2(13, 0)
