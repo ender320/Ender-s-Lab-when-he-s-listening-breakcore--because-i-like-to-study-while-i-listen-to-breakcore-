@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cjhg0l3dv2yrq" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://csr5x5mr6wop1" path="res://scenes/sprite_2d.tscn" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b2obfy5vgscfb" path="res://scenes/wall_climb_area.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://d4d5ubser5k5n" path="res://scenes/div_platform.tscn" id="5_tbgi4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 size = Vector2(1155, 28)
@@ -16,16 +17,13 @@ size = Vector2(20, 657)
 [node name="Sprite2D" parent="." unique_id=747391524 instance=ExtResource("1_sugp2")]
 position = Vector2(0, 320.5)
 
-[node name="Sprite2D3" parent="." unique_id=929945600 instance=ExtResource("1_sugp2")]
-position = Vector2(1157, 322)
-
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2071582433]
 position = Vector2(570.5, 635.5)
 scale = Vector2(9.1328125, 0.22656249)
 texture = ExtResource("1_0wfyh")
 
 [node name="Player" parent="." unique_id=1897829441 instance=ExtResource("1_o5qli")]
-position = Vector2(144, 387)
+position = Vector2(491, 573)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1483780095]
 position = Vector2(10, 639)
@@ -43,12 +41,10 @@ shape = SubResource("RectangleShape2D_g4v7s")
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1190066945]
 position = Vector2(1155, 3)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=34690254]
-position = Vector2(0, 318.5)
-shape = SubResource("RectangleShape2D_g4v7s")
-
 [node name="WallClimbArea" parent="." unique_id=282145198 instance=ExtResource("4_jyhfs")]
-position = Vector2(325, 530)
+position = Vector2(77, 435)
+
+[node name="DivPlatform" parent="." unique_id=2123446569 instance=ExtResource("5_tbgi4")]
 
 [connection signal="body_entered" from="WallClimbArea" to="WallClimbArea" method="_on_body_entered"]
 [connection signal="body_exited" from="WallClimbArea" to="WallClimbArea" method="_on_body_exited"]
