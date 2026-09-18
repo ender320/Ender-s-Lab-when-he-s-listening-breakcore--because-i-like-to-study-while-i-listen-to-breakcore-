@@ -14,6 +14,9 @@ size = Vector2(20, 657)
 
 [node name="Node2D" type="Node2D" unique_id=668062334]
 
+[node name="DivPlatform2" parent="." unique_id=2123446569 instance=ExtResource("5_tbgi4")]
+position = Vector2(66, 581)
+
 [node name="Sprite2D" parent="." unique_id=747391524 instance=ExtResource("1_sugp2")]
 position = Vector2(0, 320.5)
 
@@ -44,7 +47,7 @@ position = Vector2(1155, 3)
 [node name="WallClimbArea" parent="." unique_id=282145198 instance=ExtResource("4_jyhfs")]
 position = Vector2(77, 435)
 
-[node name="DivPlatform" parent="." unique_id=2123446569 instance=ExtResource("5_tbgi4")]
+[node name="DivPlatform" parent="." unique_id=912249022 instance=ExtResource("5_tbgi4")]
 
 [connection signal="body_entered" from="WallClimbArea" to="WallClimbArea" method="_on_body_entered"]
 [connection signal="body_exited" from="WallClimbArea" to="WallClimbArea" method="_on_body_exited"]

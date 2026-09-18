@@ -1,12 +1,30 @@
 [gd_scene format=3 uid="uid://d4d5ubser5k5n"]
 
+[ext_resource type="Script" uid="uid://716nt2cd0r7p" path="res://scenes/div_platform.gd" id="1_7jid7"]
+[ext_resource type="Texture2D" uid="uid://bpq7bi07gy3lk" path="res://icon.svg" id="2_mgcka"]
+[ext_resource type="Script" uid="uid://v5ltpns5gfr7" path="res://scenes/right_detection.gd" id="2_vdki5"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(44, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(288, 42)
 
 [node name="DivPlatform" type="CharacterBody2D" unique_id=2123446569]
+script = ExtResource("1_7jid7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=652134656]
+scale = Vector2(0.3515625, 0.34375)
+texture = ExtResource("2_mgcka")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=394916682]
 shape = SubResource("RectangleShape2D_57qmd")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=265089987]
+[node name="Right_Detection" type="Area2D" parent="." unique_id=265089987]
+script = ExtResource("2_vdki5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right_Detection" unique_id=1369400171]
+position = Vector2(122, 0)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[connection signal="body_entered" from="Right_Detection" to="Right_Detection" method="_on_body_entered"]
