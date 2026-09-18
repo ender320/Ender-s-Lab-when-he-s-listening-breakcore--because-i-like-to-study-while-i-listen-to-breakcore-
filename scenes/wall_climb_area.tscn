@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b2obfy5vgscfb"]
+
+[ext_resource type="Script" uid="uid://db4vo5rw7go0j" path="res://scenes/wall_climb_area.gd" id="1_kk2qr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(381, 68)
+
+[node name="WallClimbArea" type="Area2D" unique_id=282145198]
+script = ExtResource("1_kk2qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1440426027]
+position = Vector2(180.5, -24)
+shape = SubResource("RectangleShape2D_57qmd")
