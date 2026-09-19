@@ -13,5 +13,5 @@ func _process(delta):
 	var z: float = sin(tempo) * raio
 	rotate_y(-0.2 * delta)
 	rotate_x(-0.2 * delta)
-	
+		
 	position = Vector3(x, position.y, z)
