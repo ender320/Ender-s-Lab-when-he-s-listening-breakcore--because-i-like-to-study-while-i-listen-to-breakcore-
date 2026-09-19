@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cg2jd2ooxi30l"]
 
-[ext_resource type="Script" uid="uid://cf47qr3q26i0s" path="res://static_body_3d.gd" id="1_56js0"]
-[ext_resource type="Shader" uid="uid://dfwi1pjm13nea" path="res://overlay.gdshader" id="1_w1t7v"]
-[ext_resource type="Script" uid="uid://crn5470aeun08" path="res://camera_3d.gd" id="2_akx71"]
+[ext_resource type="Script" uid="uid://cf47qr3q26i0s" path="res://static_body_3d.gd" id="1_6cn1r"]
+[ext_resource type="Script" uid="uid://crn5470aeun08" path="res://camera_3d.gd" id="2_ck3hb"]
+[ext_resource type="Shader" uid="uid://dfwi1pjm13nea" path="res://overlay.gdshader" id="3_eckst"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
 
@@ -13,7 +13,7 @@ vertex_color_is_srgb = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tmuyj"]
 render_priority = 0
-shader = ExtResource("1_w1t7v")
+shader = ExtResource("3_eckst")
 shader_parameter/pixel_size = 3.0000000447036
 shader_parameter/levels = 13.0
 shader_parameter/gamma = Vector2(0.77, 3.07)
@@ -28,7 +28,7 @@ size = Vector2(2, 2)
 [node name="Node3D" type="Node3D" unique_id=293181672]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=559157902]
-script = ExtResource("1_56js0")
+script = ExtResource("1_6cn1r")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1268091127]
 shape = SubResource("BoxShape3D_g4v7s")
@@ -39,15 +39,15 @@ surface_material_override/0 = SubResource("StandardMaterial3D_w1t7v")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1451712850]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.8056011)
-script = ExtResource("2_akx71")
+script = ExtResource("2_ck3hb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=2083649132]
 extra_cull_margin = 16384.0
 mesh = SubResource("QuadMesh_57qmd")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D" unique_id=1227954068]
-transform = Transform3D(0.9644765, -0.26372534, 0.015302089, 0.25954896, 0.93523246, -0.24077922, 0.04918859, 0.23619753, 0.9704592, 0, -0.1414792, -0.120446205)
-light_color = Color(0.6392157, 0.2784314, 0.48235294, 1)
+transform = Transform3D(0.9644765, -0.26372528, 0.015302061, 0.25954896, 0.93523246, -0.24077924, 0.04918859, 0.23619753, 0.9704593, 0, -0.1414792, -0.120446205)
+light_color = Color(0.6048885, 0.2581301, 0.45467132, 1)
 light_energy = 1.129
 light_indirect_energy = 6.861
 light_volumetric_fog_energy = 18.935
@@ -60,7 +60,7 @@ transform = Transform3D(19.96291, 0, 0, 0, 18.174145, 0, 0, 0, 1, -1.859665e-05,
 mesh = SubResource("QuadMesh_g4v7s")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=2042303268]
-transform = Transform3D(-19.96291, 0, 5.9604645e-08, 0, 18.174147, 0, 1.9073486e-06, 0, -0.99999994, 0, 0, 6.7765903)
+transform = Transform3D(-22.06814, 0, 5.9604645e-08, 0, 18.174147, 0, 2.108492e-06, 0, -0.99999994, 0, 0, 6.7765903)
 mesh = SubResource("QuadMesh_g4v7s")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1504114807]
@@ -76,5 +76,5 @@ transform = Transform3D(-8.726065e-07, 0, 1, 0, 18.174145, 0, -19.96291, 0, -4.3
 mesh = SubResource("QuadMesh_g4v7s")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=734383373]
-transform = Transform3D(-0.08398717, -0.04444691, -0.99973524, 1.0052783, 20.049541, -0.0024203437, 20.042253, -1.0058302, -0.004067986, 10, 0, -3)
+transform = Transform3D(-0.37124062, -0.09031926, -0.987764, 4.443538, 40.742085, -0.0023913616, 88.5909, -2.043918, -0.0040192744, 10, 0, -3)
 mesh = SubResource("QuadMesh_g4v7s")

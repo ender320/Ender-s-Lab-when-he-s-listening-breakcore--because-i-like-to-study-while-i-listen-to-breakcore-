@@ -22,6 +22,9 @@ DivPlatform="*uid://716nt2cd0r7p"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=720
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
